@@ -14,7 +14,8 @@ func main() {
 		SetFullDocument(options.Default)
 
 	// Show new fields like collectionUUID and new change events type like create.
-	opts.SetCustomPipeline(bson.M{"showExpandedEvents": true})
+	opts.SetCustomPipeline(bson.M{"showExpandedEvents": true, "showSystemEvents": true})
+	//opts.SetCustomPipeline(bson.M{"showExpandedEvents": true})
 
 	//// If using the multiple replicator config, open a per-shard change stream.
 	//if csr.isMultiReplicatorConfig {
